@@ -1,5 +1,6 @@
 class AppImages {
   AppImages._();
+  static const String logo = '$imagePath/logo.webp';
 }
 
 class AppAnimations {

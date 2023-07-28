@@ -19,7 +19,7 @@ class GameItOutV2 extends ConsumerWidget {
       designSize: const Size(375, 825),
       minTextAdapt: true,
       builder: (context, child) {
-        return MaterialApp(
+        return const MaterialApp(
           debugShowCheckedModeBanner: false,
           themeMode: ThemeMode.dark,
           onGenerateRoute: RouteGenerator.getRoute,
