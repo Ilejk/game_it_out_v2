@@ -23,7 +23,7 @@ class GameItOutV2 extends ConsumerWidget {
           debugShowCheckedModeBanner: false,
           themeMode: ThemeMode.dark,
           onGenerateRoute: RouteGenerator.getRoute,
-          initialRoute: Routes.onBoardingRoute,
+          initialRoute: Routes.authRoute,
         );
       },
     );

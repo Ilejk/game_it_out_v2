@@ -14,6 +14,7 @@ class CustomTextField extends StatelessWidget {
     required this.controller,
     this.onChaned,
     required this.textFieldStyle,
+    required this.obscureText,
   });
 
   final Color bgColor;
@@ -23,6 +24,7 @@ class CustomTextField extends StatelessWidget {
   final Widget? prefixIcon;
   final Color? suffixIconColor;
   final Color? prefixIconColor;
+  final bool obscureText;
   final TextStyle hintStyle;
   final TextEditingController controller;
   final void Function(String)? onChaned;
@@ -37,6 +39,7 @@ class CustomTextField extends StatelessWidget {
         borderRadius: BorderRadius.circular(AppConsts.kRadius),
       ),
       child: TextFormField(
+        obscureText: obscureText,
         autocorrect: false,
         keyboardType: keyboardType,
         controller: controller,
@@ -79,10 +82,10 @@ class CustomTextField extends StatelessWidget {
               width: AppSizes.s1,
             ),
           ),
-          enabledBorder: const OutlineInputBorder(
-            borderRadius: BorderRadius.zero,
+          enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(AppConsts.kRadius),
             borderSide: BorderSide(
-              color: Colors.transparent,
+              color: AppColors.primaryDarkGrey,
               width: AppSizes.s1,
             ),
           ),

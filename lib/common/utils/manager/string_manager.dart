@@ -8,4 +8,17 @@ class AppString {
   static const String create = 'Create';
   static const String complete = 'Complete';
   static const String start = 'Let\'s Start';
+  static const String beginYourJourney = 'Begin your journey now!';
+  static const String whatIsGameItOut =
+      'Game It out is a simple game\ncreated to help you improve your life.';
+  static const String or = 'or';
+  static const String dontHaveAcc = 'Don\'t have an account?';
+  static const String alreadyHaveAcc = 'Already have an account?';
+  static const String register = 'Register';
+  static const String login = 'Log in';
+  static const String ctnWithGoogle = 'Continue with Google';
+  static const String ctnWithApple = 'Continue with Apple';
+  static const String password = 'Password';
+  static const String repeatPw = 'Repeat password';
+  static const String email = 'Email';
 }

@@ -9,6 +9,17 @@ class OnBoardingPage extends StatefulWidget {
 
 class _OnBoardingPageState extends State<OnBoardingPage> {
   final PageController pageController = PageController();
+  bool isLastPage = false;
+  @override
+  void initState() {
+    super.initState();
+    pageController.addListener(() {
+      setState(() {
+        isLastPage =
+            pageController.page == pageController.position.maxScrollExtent;
+      });
+    });
+  }
 
   @override
   void dispose() {
@@ -18,7 +29,6 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
   @override
   Widget build(BuildContext context) {
-    bool isLastPage = pageController.page == 2;
     return Scaffold(
       backgroundColor: AppColors.primaryLightGray,
       body: Stack(
