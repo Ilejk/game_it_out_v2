@@ -15,6 +15,29 @@ class OnBoardingPageThree extends StatelessWidget {
           Image.asset(
             AppImages.logo,
           ),
+          ReusableTextWidget(
+            text:
+                'Game It out is a simple game\ncreated to help you improve your life.',
+            maxLines: 2,
+            textAlign: TextAlign.center,
+            textStyle: appTextStyle(
+              fontSize: AppFontSizes.fs18,
+              color: AppColors.primaryDarkGrey,
+              fontWeight: FontWeight.normal,
+            ),
+          ),
+          HeightSpacer(he: AppSizes.s10.h),
+          ReusableTextWidget(
+            text: 'Begin your journey now!',
+            maxLines: 1,
+            textAlign: TextAlign.center,
+            textStyle: appTextStyle(
+              fontSize: AppFontSizes.fs20,
+              color: AppColors.primaryDarkOrange,
+              fontWeight: FontWeight.w600,
+              letterSpacing: AppSizes.s1,
+            ),
+          )
         ],
       ),
     );

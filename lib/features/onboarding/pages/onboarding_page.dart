@@ -18,6 +18,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
 
   @override
   Widget build(BuildContext context) {
+    bool isLastPage = pageController.page == 2;
     return Scaffold(
       backgroundColor: AppColors.primaryLightGray,
       body: Stack(
@@ -53,7 +54,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                         ),
                         const WidthSpacer(wi: AppSizes.s5),
                         ReusableTextWidget(
-                          text: AppString.next,
+                          text: isLastPage ? AppString.start : AppString.next,
                           textStyle: appTextStyle(
                             fontSize: AppFontSizes.fs15,
                             color: AppColors.primaryDarkGrey,

@@ -18,6 +18,9 @@ class AppFontSizes {
   static double fs20 = 20.0.sp;
   static double fs22 = 22.0.sp;
   static double fs25 = 25.0.sp;
+  static double fs30 = 30.0.sp;
+  static double fs35 = 35.0.sp;
+  static double fs40 = 40.0.sp;
 }
 
 class AppPadding {
