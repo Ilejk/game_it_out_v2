@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:game_it_out_v2/common/exports/exports.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -10,6 +10,8 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: AppColors.primaryLightGray,
+    );
   }
 }

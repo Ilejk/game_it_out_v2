@@ -136,21 +136,21 @@ class _AuthPageState extends State<AuthPage> {
           const LoginSpacer(),
           ContinueWithButton(
             onTap: () {
-              //TODO
+              //TODO create google login/register
             },
             text: AppString.ctnWithGoogle,
             logo: AppImages.googleLogo,
           ),
           ContinueWithButton(
             onTap: () {
-              //TODO
+              //TODO create apple login/register
             },
             text: AppString.ctnWithApple,
             logo: AppImages.appleLogo,
           ),
           LoginOrRegisterButton(
             onTap: () {
-              //TODO
+              //TODO craete login/register fun
             },
             text: isLoginPage ? AppString.login : AppString.register,
           ),

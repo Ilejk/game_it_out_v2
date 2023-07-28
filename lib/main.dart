@@ -6,8 +6,6 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(
-    const ProviderScope(
-      child: GameItOutV2(),
-    ),
+    GameItOutV2(),
   );
 }

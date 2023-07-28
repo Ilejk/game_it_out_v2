@@ -6,6 +6,7 @@ class Routes {
   static const String authRoute = '/authRoute';
   static const String newTaskRoute = '/newTaskRoute';
   static const String updateTaskRoute = '/updateTaskRoute';
+  static const String mainRoute = '/mainRoute';
 }
 
 class RouteGenerator {
@@ -21,7 +22,8 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const NewTaskPage());
       case Routes.updateTaskRoute:
         return MaterialPageRoute(builder: (_) => const UpdateTaskPage());
-
+      case Routes.mainRoute:
+        return MaterialPageRoute(builder: (_) => const MainPage());
       default:
         return undefinedRoute();
     }
