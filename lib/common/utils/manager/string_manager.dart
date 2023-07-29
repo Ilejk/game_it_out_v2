@@ -21,4 +21,7 @@ class AppString {
   static const String password = 'Password';
   static const String repeatPw = 'Repeat password';
   static const String email = 'Email';
+  static const String chooseChara = 'Choose your character';
+  static const String chooseName = 'Set your name';
+  static const String name = 'Name';
 }

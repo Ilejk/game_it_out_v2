@@ -6,6 +6,6 @@ void main() async {
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(
-    GameItOutV2(),
+    const GameItOutV2(),
   );
 }

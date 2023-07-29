@@ -31,6 +31,7 @@ class _AuthPageState extends State<AuthPage> {
         children: [
           Image.asset(AppImages.logo),
           CustomTextField(
+            enabledBorderColor: AppColors.primaryDarkGrey,
             obscureText: false,
             keyboardType: TextInputType.emailAddress,
             prefixIcon: const Icon(
@@ -53,6 +54,7 @@ class _AuthPageState extends State<AuthPage> {
           ),
           HeightSpacer(he: AppSizes.s10.h),
           CustomTextField(
+            enabledBorderColor: AppColors.primaryDarkGrey,
             obscureText: true,
             keyboardType: TextInputType.text,
             prefixIcon: const Icon(
@@ -77,6 +79,7 @@ class _AuthPageState extends State<AuthPage> {
           isLoginPage
               ? Container()
               : CustomTextField(
+                  enabledBorderColor: AppColors.primaryDarkGrey,
                   obscureText: true,
                   keyboardType: TextInputType.text,
                   prefixIcon: const Icon(

@@ -18,7 +18,7 @@ class _MainPageState extends State<MainPage> {
           backgroundColor: AppColors.primaryDarkGrey,
           body: Stack(
             children: [
-              _getPageByIndex(state.selectedIndex),
+              getPageByIndex(state.selectedIndex),
               getBottomNavBar(size),
             ],
           ),
@@ -27,7 +27,7 @@ class _MainPageState extends State<MainPage> {
     );
   }
 
-  Widget _getPageByIndex(int index) {
+  Widget getPageByIndex(int index) {
     switch (index) {
       case 0:
         return const HomePage();

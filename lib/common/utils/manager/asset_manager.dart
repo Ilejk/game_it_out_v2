@@ -7,6 +7,8 @@ class AppImages {
 
 class AppAnimations {
   AppAnimations._();
+  static const String man = '$animationPath/man.json';
+  static const String woman = '$animationPath/woman.json';
 }
 
 const String imagePath = 'assets/images';

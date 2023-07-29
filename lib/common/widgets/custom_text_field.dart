@@ -15,6 +15,7 @@ class CustomTextField extends StatelessWidget {
     this.onChaned,
     required this.textFieldStyle,
     required this.obscureText,
+    required this.enabledBorderColor,
   });
 
   final Color bgColor;
@@ -29,6 +30,7 @@ class CustomTextField extends StatelessWidget {
   final TextEditingController controller;
   final void Function(String)? onChaned;
   final TextStyle textFieldStyle;
+  final Color enabledBorderColor;
 
   @override
   Widget build(BuildContext context) {
@@ -85,7 +87,7 @@ class CustomTextField extends StatelessWidget {
           enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(AppConsts.kRadius),
             borderSide: BorderSide(
-              color: AppColors.primaryDarkGrey,
+              color: enabledBorderColor,
               width: AppSizes.s1,
             ),
           ),

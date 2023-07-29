@@ -33,3 +33,8 @@ export 'package:game_it_out_v2/features/profile/pages/profile_page.dart';
 export 'package:game_it_out_v2/features/tasks/pages/task_page.dart';
 export 'package:iconly/iconly.dart';
 export 'package:game_it_out_v2/features/main/pages/main_page.dart';
+export 'package:game_it_out_v2/features/character/pages/create_new_character_page.dart';
+export 'package:lottie/lottie.dart';
+export 'package:game_it_out_v2/common/widgets/shadow_box_container.dart';
+export 'package:game_it_out_v2/features/character/widgets/choose_character_box_widget.dart';
+export 'package:game_it_out_v2/common/widgets/custom_text_field.dart';
