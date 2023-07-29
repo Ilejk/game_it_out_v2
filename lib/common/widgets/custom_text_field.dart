@@ -11,7 +11,7 @@ class CustomTextField extends StatelessWidget {
     this.suffixIconColor,
     this.prefixIconColor,
     required this.hintStyle,
-    required this.controller,
+    this.controller,
     this.onChaned,
     required this.textFieldStyle,
     required this.obscureText,
@@ -27,7 +27,7 @@ class CustomTextField extends StatelessWidget {
   final Color? prefixIconColor;
   final bool obscureText;
   final TextStyle hintStyle;
-  final TextEditingController controller;
+  final TextEditingController? controller;
   final void Function(String)? onChaned;
   final TextStyle textFieldStyle;
   final Color enabledBorderColor;

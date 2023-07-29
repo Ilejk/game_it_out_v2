@@ -5,7 +5,7 @@ class RegisterRepository {
 
   const RegisterRepository({required this.context});
 
-  Future<void> handleEmailRegister(VoidCallback navigate) async {
+  Future<void> handleRegister(VoidCallback navigate) async {
     try {
       final state = context.read<RegisterBloc>().state;
       String emailAddress = state.email;
@@ -46,6 +46,8 @@ class RegisterRepository {
           'email': emailAddress,
         });
 
+        final uid = FirebaseAuth.instance.currentUser!.uid;
+        GBM.storageService.setString(AppConsts.STORAGE_USER_TOKEN_KEY, uid);
         navigate();
       }
     } on FirebaseAuthException catch (e) {
