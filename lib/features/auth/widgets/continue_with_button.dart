@@ -6,10 +6,12 @@ class ContinueWithButton extends StatelessWidget {
     required this.onTap,
     required this.text,
     required this.logo,
+    required this.spacer,
   });
   final VoidCallback onTap;
   final String text;
   final String logo;
+  final double spacer;
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +39,7 @@ class ContinueWithButton extends StatelessWidget {
                 padding: EdgeInsets.all(AppPadding.p8.h),
                 child: Image.asset(logo),
               ),
-              WidthSpacer(wi: AppSizes.s15.w),
+              WidthSpacer(wi: spacer),
               ReusableTextWidget(
                 text: text,
                 textStyle: appTextStyle(

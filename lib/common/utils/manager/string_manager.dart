@@ -24,4 +24,5 @@ class AppString {
   static const String chooseChara = 'Choose your character';
   static const String chooseName = 'Set your name';
   static const String name = 'Name';
+  static const String surname = 'Surname';
 }

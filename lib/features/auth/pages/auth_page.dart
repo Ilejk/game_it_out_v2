@@ -138,6 +138,7 @@ class _AuthPageState extends State<AuthPage> {
           ),
           const LoginSpacer(),
           ContinueWithButton(
+            spacer: AppSizes.s30.w,
             onTap: () {
               //TODO create google login/register
             },
@@ -145,6 +146,7 @@ class _AuthPageState extends State<AuthPage> {
             logo: AppImages.googleLogo,
           ),
           ContinueWithButton(
+            spacer: AppSizes.s15.w,
             onTap: () {
               //TODO create apple login/register
             },

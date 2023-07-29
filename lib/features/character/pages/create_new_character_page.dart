@@ -13,7 +13,7 @@ class _CreateNewCharacterPageState extends State<CreateNewCharacterPage>
   AnimationController? _manAnimationController;
   AnimationController? _womanAnimationController;
   TextEditingController nameController = TextEditingController();
-
+  TextEditingController surnameController = TextEditingController();
   @override
   void initState() {
     super.initState();
@@ -142,7 +142,30 @@ class _CreateNewCharacterPageState extends State<CreateNewCharacterPage>
                   obscureText: false,
                 ),
               ),
-              HeightSpacer(he: AppSizes.s50.h),
+              HeightSpacer(he: AppSizes.s15.h),
+              ShadowBoxContainer(
+                height: AppSizes.s60.h,
+                width: AppValues.deviceWidth,
+                color: AppColors.primaryLightGray,
+                child: CustomTextField(
+                  enabledBorderColor: AppColors.primaryLightGray,
+                  bgColor: AppColors.primaryLightGray,
+                  hintText: AppString.surname,
+                  hintStyle: appTextStyle(
+                    fontSize: AppFontSizes.fs15,
+                    color: AppColors.primaryDarkGrey,
+                    fontWeight: FontWeight.normal,
+                  ),
+                  controller: surnameController,
+                  textFieldStyle: appTextStyle(
+                    fontSize: AppFontSizes.fs18,
+                    color: AppColors.primaryDarkGrey,
+                    fontWeight: FontWeight.w600,
+                  ),
+                  obscureText: false,
+                ),
+              ),
+              HeightSpacer(he: AppSizes.s200.h),
               GestureDetector(
                 onTap: () {
                   //TODO
@@ -156,7 +179,7 @@ class _CreateNewCharacterPageState extends State<CreateNewCharacterPage>
                   ),
                   child: Center(
                     child: ReusableTextWidget(
-                      text: 'Let\'s Start!',
+                      text: AppString.start,
                       textAlign: TextAlign.center,
                       textStyle: appTextStyle(
                         fontSize: AppFontSizes.fs20,

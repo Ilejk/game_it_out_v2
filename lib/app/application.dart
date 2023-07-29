@@ -21,7 +21,7 @@ class GameItOutV2 extends StatelessWidget {
             debugShowCheckedModeBanner: false,
             themeMode: ThemeMode.dark,
             onGenerateRoute: RouteGenerator.getRoute,
-            initialRoute: Routes.createNewCharacterRoute,
+            initialRoute: Routes.mainRoute,
           );
         },
       ),

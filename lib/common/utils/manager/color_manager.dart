@@ -15,8 +15,15 @@ class AppColors {
   static Color secondaryDarkGrey = HexColor.fromHex('#2D2D2D');
   static Color primaryLightGray = HexColor.fromHex('#D9D9D9');
   static const Color primaryDarkOrange = Color.fromARGB(255, 255, 111, 0);
+  static const Color secondaryOrange = Color.fromARGB(255, 238, 148, 21);
+  static const Color veryDarkOrange = Color.fromARGB(255, 216, 89, 5);
   static Color lightPurple = HexColor.fromHex('#7D97F4');
   static Color darkPurple = HexColor.fromHex('#110E72');
+  static List<Color> orangeColorGradient = [
+    AppColors.secondaryOrange,
+    AppColors.primaryDarkOrange,
+    AppColors.veryDarkOrange,
+  ];
 }
 
 extension HexColor on Color {
