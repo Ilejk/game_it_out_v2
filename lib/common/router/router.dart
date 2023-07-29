@@ -3,7 +3,8 @@ import 'package:game_it_out_v2/common/exports/exports.dart';
 class Routes {
   static const String onBoardingRoute = '/';
   static const String homeRoute = '/homeRoute';
-  static const String authRoute = '/authRoute';
+  static const String loginRoute = '/loginRoute';
+  static const String registerRoute = '/registerRoute';
   static const String createNewCharacterRoute = '/createNewCharacterRoute';
   static const String newTaskRoute = '/newTaskRoute';
   static const String updateTaskRoute = '/updateTaskRoute';
@@ -17,8 +18,10 @@ class RouteGenerator {
         return MaterialPageRoute(builder: (_) => const OnBoardingPage());
       case Routes.homeRoute:
         return MaterialPageRoute(builder: (_) => const HomePage());
-      case Routes.authRoute:
-        return MaterialPageRoute(builder: (_) => const AuthPage());
+      case Routes.loginRoute:
+        return MaterialPageRoute(builder: (_) => const LoginPage());
+      case Routes.registerRoute:
+        return MaterialPageRoute(builder: (_) => const RegisterPage());
       case Routes.newTaskRoute:
         return MaterialPageRoute(builder: (_) => const NewTaskPage());
       case Routes.updateTaskRoute:

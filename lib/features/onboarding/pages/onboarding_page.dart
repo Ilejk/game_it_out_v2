@@ -97,7 +97,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   void nextPage() {
     bool isLastPage = pageController.page == 2;
     if (isLastPage) {
-      GBM.pushAndReplaceNamed(context: context, routeName: Routes.authRoute);
+      GBM.pushAndReplaceNamed(context: context, routeName: Routes.loginRoute);
     } else {
       pageController.nextPage(
         duration: const Duration(milliseconds: 600),

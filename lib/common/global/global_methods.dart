@@ -1,4 +1,5 @@
 import 'package:game_it_out_v2/common/exports/exports.dart';
+import 'package:game_it_out_v2/common/service/storage_service.dart';
 
 class GBM {
   GBM._();
@@ -21,5 +22,13 @@ class GBM {
 
   static pop({required BuildContext context}) {
     Navigator.of(context).pop();
+  }
+
+  static late StorageService storageService;
+  static Future init() async {
+    WidgetsFlutterBinding.ensureInitialized();
+    await Firebase.initializeApp(
+        options: DefaultFirebaseOptions.currentPlatform);
+    storageService = await StorageService().init();
   }
 }

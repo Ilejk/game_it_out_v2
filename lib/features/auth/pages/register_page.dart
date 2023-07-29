@@ -1,26 +1,23 @@
 import 'package:game_it_out_v2/common/exports/exports.dart';
-import 'package:game_it_out_v2/common/widgets/custom_text_field.dart';
-import 'package:game_it_out_v2/features/auth/widgets/continue_with_button.dart';
-import 'package:game_it_out_v2/features/auth/widgets/login_or_register_button.dart';
-import 'package:game_it_out_v2/features/auth/widgets/login_spacer.dart';
 
-class AuthPage extends StatefulWidget {
-  const AuthPage({super.key});
+class RegisterPage extends StatefulWidget {
+  const RegisterPage({super.key});
 
   @override
-  State<AuthPage> createState() => _AuthPageState();
+  State<RegisterPage> createState() => _RegisterPageState();
 }
 
-class _AuthPageState extends State<AuthPage> {
+class _RegisterPageState extends State<RegisterPage> {
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   TextEditingController repeatPasswordController = TextEditingController();
-  bool isLoginPage = true;
+
   @override
   void dispose() {
     super.dispose();
     emailController.dispose();
     passwordController.dispose();
+    repeatPasswordController.dispose();
   }
 
   @override
@@ -75,31 +72,29 @@ class _AuthPageState extends State<AuthPage> {
               fontWeight: FontWeight.w600,
             ),
           ),
-          isLoginPage ? Container() : HeightSpacer(he: AppSizes.s10.h),
-          isLoginPage
-              ? Container()
-              : CustomTextField(
-                  enabledBorderColor: AppColors.primaryDarkGrey,
-                  obscureText: true,
-                  keyboardType: TextInputType.text,
-                  prefixIcon: const Icon(
-                    Icons.lock,
-                    color: AppColors.primaryDarkOrange,
-                  ),
-                  bgColor: AppColors.primaryLightGray,
-                  hintText: AppString.repeatPw,
-                  hintStyle: appTextStyle(
-                    fontSize: AppFontSizes.fs15,
-                    color: AppColors.primaryDarkGrey,
-                    fontWeight: FontWeight.normal,
-                  ),
-                  controller: repeatPasswordController,
-                  textFieldStyle: appTextStyle(
-                    fontSize: AppFontSizes.fs18,
-                    color: AppColors.primaryDarkGrey,
-                    fontWeight: FontWeight.w600,
-                  ),
-                ),
+          HeightSpacer(he: AppSizes.s10.h),
+          CustomTextField(
+            enabledBorderColor: AppColors.primaryDarkGrey,
+            obscureText: true,
+            keyboardType: TextInputType.text,
+            prefixIcon: const Icon(
+              Icons.lock,
+              color: AppColors.primaryDarkOrange,
+            ),
+            bgColor: AppColors.primaryLightGray,
+            hintText: AppString.repeatPw,
+            hintStyle: appTextStyle(
+              fontSize: AppFontSizes.fs15,
+              color: AppColors.primaryDarkGrey,
+              fontWeight: FontWeight.normal,
+            ),
+            controller: repeatPasswordController,
+            textFieldStyle: appTextStyle(
+              fontSize: AppFontSizes.fs18,
+              color: AppColors.primaryDarkGrey,
+              fontWeight: FontWeight.w600,
+            ),
+          ),
           Padding(
             padding: EdgeInsets.symmetric(
               horizontal: AppPadding.p20.w,
@@ -109,9 +104,7 @@ class _AuthPageState extends State<AuthPage> {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ReusableTextWidget(
-                  text: isLoginPage
-                      ? AppString.dontHaveAcc
-                      : AppString.alreadyHaveAcc,
+                  text: AppString.alreadyHaveAcc,
                   textStyle: appTextStyle(
                     fontSize: AppFontSizes.fs14,
                     color: AppColors.primaryDarkGrey,
@@ -119,13 +112,9 @@ class _AuthPageState extends State<AuthPage> {
                   ),
                 ),
                 GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      isLoginPage = !isLoginPage;
-                    });
-                  },
+                  onTap: () => GBM.pop(context: context),
                   child: ReusableTextWidget(
-                    text: isLoginPage ? AppString.register : AppString.login,
+                    text: AppString.login,
                     textStyle: appTextStyle(
                       fontSize: AppFontSizes.fs14,
                       color: AppColors.primaryDarkOrange,
@@ -157,7 +146,7 @@ class _AuthPageState extends State<AuthPage> {
             onTap: () {
               //TODO craete login/register fun
             },
-            text: isLoginPage ? AppString.login : AppString.register,
+            text: AppString.register,
           ),
         ],
       ),

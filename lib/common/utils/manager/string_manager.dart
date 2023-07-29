@@ -26,3 +26,12 @@ class AppString {
   static const String name = 'Name';
   static const String surname = 'Surname';
 }
+
+class ErrorCodeString {
+  ErrorCodeString._();
+  static const String invalidEmail = 'invalid-email';
+  static const String emailInUse = 'email-already-in-use';
+  static const String weakPW = 'weak-password';
+  static const String uNotFound = 'user-not-found';
+  static const String wrongPW = 'wrong-password';
+}
