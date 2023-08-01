@@ -6,5 +6,6 @@ class AppBlocProviders {
         BlocProvider(create: (context) => ChangePasswordBloc()),
         BlocProvider(create: (context) => SignInBloc()),
         BlocProvider(create: (context) => RegisterBloc()),
+        BlocProvider(create: (context) => ChangeEmailBloc()),
       ];
 }

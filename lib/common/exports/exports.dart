@@ -59,3 +59,5 @@ export 'package:game_it_out_v2/features/profile/pages/help_page.dart';
 export 'package:game_it_out_v2/features/auth/repository/change_password_repository.dart';
 export 'package:game_it_out_v2/features/profile/widgets/change_password_button.dart';
 export 'package:game_it_out_v2/features/profile/widgets/profile_line_spacer.dart';
+export 'package:game_it_out_v2/features/auth/controllers/change_email/change_email_bloc.dart';
+export 'package:game_it_out_v2/features/auth/repository/change_email_repository.dart';

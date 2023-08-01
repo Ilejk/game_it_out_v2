@@ -85,7 +85,8 @@ class _ChangePasswordPageState extends State<ChangePasswordPage> {
                         ),
                       ],
                     ),
-                    ChangePWButton(
+                    UpdateInfoButton(
+                      title: AppString.profileBT1,
                       onTap: () {
                         ChangePasswordRepository(context: context)
                             .handleChanePassword(

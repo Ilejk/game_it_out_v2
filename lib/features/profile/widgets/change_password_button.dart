@@ -1,11 +1,13 @@
 import 'package:game_it_out_v2/common/exports/exports.dart';
 
-class ChangePWButton extends StatelessWidget {
-  const ChangePWButton({
+class UpdateInfoButton extends StatelessWidget {
+  const UpdateInfoButton({
     super.key,
+    required this.title,
     required this.onTap,
   });
   final VoidCallback onTap;
+  final String title;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -19,7 +21,7 @@ class ChangePWButton extends StatelessWidget {
         ),
         child: Center(
           child: ReusableTextWidget(
-            text: AppString.profileBT1,
+            text: title,
             textAlign: TextAlign.center,
             textStyle: appTextStyle(
               letterSpacing: AppSizes.s1,
