@@ -29,6 +29,8 @@ class AppString {
   static const String profileBT2 = 'CHANGE EMAIL';
   static const String profileBT3 = 'HELP';
   static const String profileBT4 = 'LOG OUT';
+  static const String oldPw = 'Old password';
+  static const String newPW = 'New password';
 }
 
 class ErrorCodeString {

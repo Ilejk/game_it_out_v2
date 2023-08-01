@@ -1,5 +1,4 @@
 import 'package:game_it_out_v2/common/exports/exports.dart';
-import 'package:game_it_out_v2/features/auth/pages/auth_page.dart';
 
 class Routes {
   static const String onBoardingRoute = '/';
@@ -11,6 +10,9 @@ class Routes {
   static const String updateTaskRoute = '/updateTaskRoute';
   static const String mainRoute = '/mainRoute';
   static const String authRoute = '/authRoute';
+  static const String helpRoute = '/helpRoute';
+  static const String changePasswordRoute = '/changePasswordRoute';
+  static const String changeEmailRoute = '/changeEmailRoute';
 }
 
 class RouteGenerator {
@@ -35,6 +37,12 @@ class RouteGenerator {
             builder: (_) => const CreateNewCharacterPage());
       case Routes.authRoute:
         return MaterialPageRoute(builder: (_) => const AuthPage());
+      case Routes.helpRoute:
+        return MaterialPageRoute(builder: (_) => const HelpPage());
+      case Routes.changeEmailRoute:
+        return MaterialPageRoute(builder: (_) => const ChangeEmailPage());
+      case Routes.changePasswordRoute:
+        return MaterialPageRoute(builder: (_) => const ChangePasswordPage());
 
       default:
         return undefinedRoute();

@@ -17,6 +17,7 @@ class AppColors {
   static const Color primaryDarkOrange = Color.fromARGB(255, 255, 111, 0);
   static const Color secondaryOrange = Color.fromARGB(255, 238, 148, 21);
   static const Color veryDarkOrange = Color.fromARGB(255, 216, 89, 5);
+  static Color accentDarkGrey = HexColor.fromHex('#444444');
   static Color lightPurple = HexColor.fromHex('#7D97F4');
   static Color darkPurple = HexColor.fromHex('#110E72');
   static List<Color> orangeColorGradient = [

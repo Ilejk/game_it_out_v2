@@ -11,7 +11,12 @@ class _ProfilePageState extends State<ProfilePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.primaryLightGray,
+      backgroundColor: AppColors.primaryDarkGrey,
+      appBar: AppBar(
+        backgroundColor: AppColors.primaryDarkGrey,
+        elevation: AppConsts.zero,
+        automaticallyImplyLeading: false,
+      ),
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.symmetric(
@@ -21,33 +26,34 @@ class _ProfilePageState extends State<ProfilePage> {
           child: Column(
             children: [
               const ProfileProgressInformationBox(),
-              HeightSpacer(he: AppSizes.s20.h),
-              ProfileButtonUnderlined(
+              const ProfileLineSpacer(),
+              ProfilePageButton(
                 iconData: Icons.keyboard_arrow_right_sharp,
-                onTap: () {
-                  //TODO
-                },
+                onTap: () => GBM.pushNamed(
+                    context: context, routeName: Routes.changePasswordRoute),
                 title: AppString.profileBT1,
               ),
-              ProfileButtonUnderlined(
+              ProfilePageButton(
                 iconData: Icons.keyboard_arrow_right_sharp,
-                onTap: () {
-                  //TODO
-                },
+                onTap: () => GBM.pushNamed(
+                    context: context, routeName: Routes.changeEmailRoute),
                 title: AppString.profileBT2,
               ),
-              ProfileButtonUnderlined(
+              ProfilePageButton(
                 iconData: Icons.keyboard_arrow_right_sharp,
-                onTap: () {
-                  //TODO
-                },
+                onTap: () => GBM.pushNamed(
+                    context: context, routeName: Routes.helpRoute),
                 title: AppString.profileBT3,
               ),
-              HeightSpacer(he: AppSizes.s200.h),
-              LogoutButton(
+              const ProfileLineSpacer(),
+              ProfilePageButton(
+                iconData: IconlyLight.logout,
                 onTap: () {
-                  //TODO
+                  GBM.storageService.remove(AppConsts.STORAGE_USER_TOKEN_KEY);
+                  GBM.pushAndReplaceNamed(
+                      context: context, routeName: Routes.loginRoute);
                 },
+                title: AppString.profileBT4,
               ),
             ],
           ),

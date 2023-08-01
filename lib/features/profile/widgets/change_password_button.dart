@@ -1,7 +1,7 @@
 import 'package:game_it_out_v2/common/exports/exports.dart';
 
-class LogoutButton extends StatelessWidget {
-  const LogoutButton({
+class ChangePWButton extends StatelessWidget {
+  const ChangePWButton({
     super.key,
     required this.onTap,
   });
@@ -19,12 +19,12 @@ class LogoutButton extends StatelessWidget {
         ),
         child: Center(
           child: ReusableTextWidget(
-            text: AppString.profileBT4,
+            text: AppString.profileBT1,
             textAlign: TextAlign.center,
             textStyle: appTextStyle(
               letterSpacing: AppSizes.s1,
               fontSize: AppFontSizes.fs18,
-              color: AppColors.white,
+              color: AppColors.primaryLightGray,
               fontWeight: FontWeight.w600,
             ),
           ),

@@ -1,7 +1,7 @@
 import 'package:game_it_out_v2/common/exports/exports.dart';
 
-class ProfileButtonUnderlined extends StatelessWidget {
-  const ProfileButtonUnderlined({
+class ProfilePageButton extends StatelessWidget {
+  const ProfilePageButton({
     super.key,
     required this.onTap,
     required this.title,
@@ -20,16 +20,12 @@ class ProfileButtonUnderlined extends StatelessWidget {
           width: AppValues.deviceWidth,
           height: AppSizes.s50.h,
           decoration: BoxDecoration(
-            color: AppColors.primaryLightGray,
-            border: Border(
-              bottom: BorderSide(
-                color: AppColors.primaryDarkOrange,
-                width: AppSizes.s1.w,
-              ),
-            ),
+            color: AppColors.secondaryDarkGrey,
+            borderRadius: BorderRadius.circular(AppConsts.kRadius),
           ),
-          child: Align(
-            alignment: Alignment.bottomLeft,
+          child: Padding(
+            padding: EdgeInsets.symmetric(
+                horizontal: AppPadding.p8.w, vertical: AppPadding.p2.h),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.center,
@@ -39,14 +35,14 @@ class ProfileButtonUnderlined extends StatelessWidget {
                   textStyle: appTextStyle(
                     letterSpacing: AppSizes.s1,
                     fontSize: AppFontSizes.fs18,
-                    color: AppColors.primaryDarkGrey,
-                    fontWeight: FontWeight.w600,
+                    color: AppColors.primaryLightGray,
+                    fontWeight: FontWeight.normal,
                   ),
                 ),
                 Icon(
                   iconData,
-                  color: AppColors.primaryDarkGrey,
-                  size: AppSizes.s40,
+                  color: AppColors.primaryLightGray,
+                  size: AppSizes.s35,
                 )
               ],
             ),
