@@ -25,6 +25,10 @@ class AppString {
   static const String chooseName = 'Set your name';
   static const String name = 'Name';
   static const String surname = 'Surname';
+  static const String profileBT1 = 'CHANGE PASSWORD';
+  static const String profileBT2 = 'CHANGE EMAIL';
+  static const String profileBT3 = 'HELP';
+  static const String profileBT4 = 'LOG OUT';
 }
 
 class ErrorCodeString {

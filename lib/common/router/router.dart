@@ -1,4 +1,5 @@
 import 'package:game_it_out_v2/common/exports/exports.dart';
+import 'package:game_it_out_v2/features/auth/pages/auth_page.dart';
 
 class Routes {
   static const String onBoardingRoute = '/';
@@ -9,6 +10,7 @@ class Routes {
   static const String newTaskRoute = '/newTaskRoute';
   static const String updateTaskRoute = '/updateTaskRoute';
   static const String mainRoute = '/mainRoute';
+  static const String authRoute = '/authRoute';
 }
 
 class RouteGenerator {
@@ -31,6 +33,9 @@ class RouteGenerator {
       case Routes.createNewCharacterRoute:
         return MaterialPageRoute(
             builder: (_) => const CreateNewCharacterPage());
+      case Routes.authRoute:
+        return MaterialPageRoute(builder: (_) => const AuthPage());
+
       default:
         return undefinedRoute();
     }

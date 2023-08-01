@@ -97,6 +97,8 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
   void nextPage() {
     bool isLastPage = pageController.page == 2;
     if (isLastPage) {
+      GBM.storageService
+          .setBool(AppConsts.STORAGE_DEVICE_OPEN_FIRST_TIME, true);
       GBM.pushAndReplaceNamed(context: context, routeName: Routes.loginRoute);
     } else {
       pageController.nextPage(

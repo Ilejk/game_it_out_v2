@@ -50,3 +50,6 @@ export 'package:game_it_out_v2/features/auth/widgets/continue_with_button.dart';
 export 'package:game_it_out_v2/features/auth/widgets/login_or_register_button.dart';
 export 'package:game_it_out_v2/features/auth/widgets/login_spacer.dart';
 export 'package:game_it_out_v2/features/auth/pages/register_page.dart';
+export 'package:game_it_out_v2/features/profile/widgets/logout_button.dart';
+export 'package:game_it_out_v2/features/profile/widgets/profile_button_underlined_button.dart';
+export 'package:game_it_out_v2/features/profile/widgets/profile_progress_info_box.dart';
