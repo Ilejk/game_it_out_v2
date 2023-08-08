@@ -7,5 +7,8 @@ class AppBlocProviders {
         BlocProvider(create: (context) => SignInBloc()),
         BlocProvider(create: (context) => RegisterBloc()),
         BlocProvider(create: (context) => ChangeEmailBloc()),
+        BlocProvider(
+            create: (context) => AchievementBloc(AchievementRepository())
+              ..add(FetchAchievementsEvent())),
       ];
 }

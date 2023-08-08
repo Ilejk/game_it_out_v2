@@ -1,6 +1,6 @@
 export 'package:flutter/material.dart';
 export 'package:game_it_out_v2/common/utils/manager/string_manager.dart';
-export 'package:game_it_out_v2/features/auth/pages/login_page.dart';
+export 'package:game_it_out_v2/features/auth/sign_in/pages/sing_in_page.dart';
 export 'package:game_it_out_v2/features/home/pages/home_page.dart';
 export 'package:game_it_out_v2/features/onboarding/pages/onboarding_page.dart';
 export 'package:game_it_out_v2/features/tasks/pages/new_task_page.dart';
@@ -40,16 +40,16 @@ export 'package:game_it_out_v2/features/character/widgets/choose_character_box_w
 export 'package:game_it_out_v2/common/widgets/custom_text_field.dart';
 export 'package:equatable/equatable.dart';
 export 'package:game_it_out_v2/features/auth/controllers/change_password/change_password_bloc.dart';
-export 'package:game_it_out_v2/features/auth/controllers/register/register_bloc.dart';
-export 'package:game_it_out_v2/features/auth/controllers/sign_in/sign_in_bloc.dart';
+export 'package:game_it_out_v2/features/auth/register/controllers/register_bloc.dart';
+export 'package:game_it_out_v2/features/auth/sign_in/controllers/sign_in_bloc.dart';
 export 'package:fluttertoast/fluttertoast.dart';
 export 'package:firebase_auth/firebase_auth.dart';
 export 'package:game_it_out_v2/common/widgets/toast_info.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
-export 'package:game_it_out_v2/features/auth/widgets/continue_with_button.dart';
-export 'package:game_it_out_v2/features/auth/widgets/login_or_register_button.dart';
-export 'package:game_it_out_v2/features/auth/widgets/login_spacer.dart';
-export 'package:game_it_out_v2/features/auth/pages/register_page.dart';
+export 'package:game_it_out_v2/features/auth/sign_in/widgets/continue_with_button.dart';
+export 'package:game_it_out_v2/features/auth/sign_in/widgets/login_or_register_button.dart';
+export 'package:game_it_out_v2/features/auth/sign_in/widgets/login_spacer.dart';
+export 'package:game_it_out_v2/features/auth/register/pages/register_page.dart';
 export 'package:game_it_out_v2/features/profile/widgets/profile_button_underlined_button.dart';
 export 'package:game_it_out_v2/features/profile/widgets/profile_progress_info_box.dart';
 export 'package:game_it_out_v2/features/auth/pages/auth_page.dart';
@@ -61,3 +61,5 @@ export 'package:game_it_out_v2/features/profile/widgets/change_password_button.d
 export 'package:game_it_out_v2/features/profile/widgets/profile_line_spacer.dart';
 export 'package:game_it_out_v2/features/auth/controllers/change_email/change_email_bloc.dart';
 export 'package:game_it_out_v2/features/auth/repository/change_email_repository.dart';
+export 'package:game_it_out_v2/features/achievements/controllers/achievement_bloc.dart';
+export 'package:game_it_out_v2/features/achievements/repository/achievement_repository.dart';

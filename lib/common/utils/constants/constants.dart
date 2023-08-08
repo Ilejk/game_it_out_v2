@@ -12,4 +12,6 @@ class AppConsts {
       'STORAGE_DEVICE_OPEN_FIRST_TIME_1';
   static const String empty = '';
   static const double zero = 0;
+  static const int startValueInt = 999999999999999;
+  static const double startValueDouble = 999999999999999.0;
 }

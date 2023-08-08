@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:game_it_out_v2/common/exports/exports.dart';
 
 class TaskPage extends StatefulWidget {
   const TaskPage({super.key});
@@ -10,6 +10,15 @@ class TaskPage extends StatefulWidget {
 class _TaskPageState extends State<TaskPage> {
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    return Scaffold(
+      backgroundColor: AppColors.primaryLightGray,
+      body: SafeArea(
+        child: ListView.builder(
+          itemBuilder: (context, index) {
+            return;
+          },
+        ),
+      ),
+    );
   }
 }

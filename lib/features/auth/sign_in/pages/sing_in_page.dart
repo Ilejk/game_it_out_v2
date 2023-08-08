@@ -1,5 +1,5 @@
 import 'package:game_it_out_v2/common/exports/exports.dart';
-import 'package:game_it_out_v2/features/auth/repository/sign_in_repository.dart';
+import 'package:game_it_out_v2/features/auth/sign_in/repository/sign_in_repository.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
