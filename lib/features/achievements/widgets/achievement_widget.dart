@@ -14,7 +14,7 @@ class AchievementWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: AppValues.deviceWidth,
-      height: AppValues.deviceHeight * 0.15,
+      height: AppValues.deviceHeight * 0.12,
       decoration: BoxDecoration(
         color: isCompleted == true
             ? AppColors.primaryLightGray

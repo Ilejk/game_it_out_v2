@@ -63,3 +63,5 @@ export 'package:game_it_out_v2/features/auth/controllers/change_email/change_ema
 export 'package:game_it_out_v2/features/auth/repository/change_email_repository.dart';
 export 'package:game_it_out_v2/features/achievements/controllers/achievement_bloc.dart';
 export 'package:game_it_out_v2/features/achievements/repository/achievement_repository.dart';
+export 'package:game_it_out_v2/features/achievements/widgets/achievement_widget.dart';
+export 'package:game_it_out_v2/common/models/achievement_model.dart';

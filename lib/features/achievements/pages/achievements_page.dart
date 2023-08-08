@@ -1,5 +1,4 @@
 import 'package:game_it_out_v2/common/exports/exports.dart';
-import 'package:game_it_out_v2/features/achievements/widgets/achievement_widget.dart';
 
 class AchievementsPage extends StatefulWidget {
   const AchievementsPage({super.key});
@@ -32,7 +31,7 @@ class _AchievementsPageState extends State<AchievementsPage> {
         child: BlocBuilder<AchievementBloc, AchievementState>(
           builder: (context, state) {
             if (state is LoadingState) {
-              return Center(child: CircularProgressIndicator());
+              return const Center(child: CircularProgressIndicator());
             } else if (state is AchievementsLoadedState) {
               final achievements = state.achievements;
               return ListView.builder(
@@ -49,7 +48,7 @@ class _AchievementsPageState extends State<AchievementsPage> {
             } else if (state is ErrorState) {
               return Center(child: Text(state.message));
             } else {
-              return Center(child: Text("Unknown state"));
+              return const Center(child: Text("Unknown state"));
             }
           },
         ),

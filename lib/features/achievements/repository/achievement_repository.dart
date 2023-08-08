@@ -1,5 +1,4 @@
 import 'package:game_it_out_v2/common/exports/exports.dart';
-import 'package:game_it_out_v2/common/models/achievement_model.dart';
 
 class AchievementRepository {
   final CollectionReference achievementsCollection =
@@ -25,7 +24,6 @@ class AchievementRepository {
         );
       }).toList();
     } catch (e) {
-      print(e);
       throw Exception("Failed to fetch achievements");
     }
   }
